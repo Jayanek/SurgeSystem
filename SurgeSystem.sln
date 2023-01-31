@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurgeAPI", "SurgeAPI\SurgeAPI.csproj", "{9A23D057-7FD6-4D5D-A084-762FB3ACB2B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A23D057-7FD6-4D5D-A084-762FB3ACB2B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A23D057-7FD6-4D5D-A084-762FB3ACB2B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A23D057-7FD6-4D5D-A084-762FB3ACB2B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A23D057-7FD6-4D5D-A084-762FB3ACB2B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29919330-89A8-481A-A84D-AD3BCFC252B3}
+	EndGlobalSection
+EndGlobal
