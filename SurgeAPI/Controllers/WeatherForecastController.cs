@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using SurgeAPI.Models;
+using SurgeAPI.Repository;
 
 namespace SurgeAPI.Controllers
 {
@@ -6,28 +8,26 @@ namespace SurgeAPI.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ICountryRepo countryRepo;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, ICountryRepo countryRepo)
         {
             _logger = logger;
+            this.countryRepo = countryRepo;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<Country> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var c =  countryRepo.GetCountryList();
+            return c.ToArray();
         }
     }
 }
